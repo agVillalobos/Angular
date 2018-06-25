@@ -1,0 +1,13 @@
+
+-pagina oficial
+	-https://angular.io/
+-tener instalado node.js
+	-https://nodejs.org/en/
+-instalar angular
+	-npm install -g @angular/cli
+-crear nuevo proyecto estar dentro de la carpeta del curso.
+	-ng new my-app
+-levantar el servicio
+	-ng serve --open
+-crear un nuevo componente
+	-ng generate component -mycomponent

@@ -1,0 +1,13 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Bienvenidos a {{ title }}!
+  </h1>
+  <p> Se aprendera angular desde cero a master</p>
+
+  <button (click)="ocultarVideojuegos(false)" *ngIf="mostrar_videojuegos">Ocultar</button>
+  <button (click)="ocultarVideojuegos(true)" *ngIf="!mostrar_videojuegos">Mostrar</button>
+  <videojuego *ngIf="mostrar_videojuegos"></videojuego>
+  <zapatillas></zapatillas>
+  <cursos></cursos>
+</div>
