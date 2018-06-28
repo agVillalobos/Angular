@@ -1,42 +1,33 @@
-import {Component, OnInit, DoCheck, OnDestroy} from '@angular/core'
+import { Component, OnInit, DoCheck, OnDestroy } from '@angular/core';
 
 @Component({
     selector: 'videojuego',
-    // template: `
-    //     <h2>Componente de videojuegos</h2>
-    //     <ul>
-    //         <li>GTA</li>
-    //         <li>POF</li>
-    //         <li>Tekken</li>
-    //         <li>GTA</li>
-    //     </ul>
-    // `
     templateUrl: './videojuego.component.html'
 })
 
-export class VideojuegoComponent implements OnInit, DoCheck, OnDestroy{
-    public titulo:string;
+export class VideojuegoComponent implements OnInit, DoCheck, OnDestroy {
+    public titulo: string;
     public listado: string;
 
-    constructor(){
-        this.titulo= "Componente de videojuegos";
-        this.listado= "listado de videojuegos mas populares";
-        console.log("Se ha cargado el compoenente");
+    constructor() {
+        this.titulo = "Componente de videojuegos";
+        this.listado = "Listado de los juegos:";
+        // console.log("se ha cargado el componente");
     }
 
-    ngOnInit(){
-        console.log("OnInit ejecutado");
+    ngOnInit() {
+        // console.log("OnInit iniciado");
     }
 
-    ngDoCheck(){
-        console.log("Do check ejecutado");
+    ngDoCheck() {
+        // console.log("Do check ejecutad");
     }
 
     ngOnDestroy(){
-        console.log("OnDestroy ejecutado");
+        // console.log("Ondestroy ejecutado");
     }
 
-    cambiarTitulo(){
-        this.titulo="Nuevo titulo del component";
+    cambiarTitulo() {
+        this.titulo = "Nuevo Titulo del componente";
     }
 }
