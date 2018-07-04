@@ -8,6 +8,7 @@ import {Global} from './global'
 export class ProjectService{
     public url: string;
 
+
     constructor(
         private _http: HttpClient
     ){
@@ -16,5 +17,37 @@ export class ProjectService{
 
     testService(){
         return 'Probando el servicio de Angular';
+    }
+
+    saveProject(project:Project): Observable<any>{
+        let params = JSON.stringify(project);
+        let headers = new HttpHeaders().set('content-Type', 'application/json');
+
+        return this._http.post(this.url + 'save-project', params, {headers: headers});
+    }
+
+    getProjects(): Observable<any>{
+        let headers = new HttpHeaders().set('Content-type', 'application/json');
+
+        return this._http.get(this.url+'projects', {headers:headers});
+    }
+
+    getProyect(id): Observable<any>{
+        let headers = new HttpHeaders().set('Content-type', 'application/json');
+
+        return this._http.get(this.url + 'project/'+id, {headers: headers});
+    }
+
+    deleteProyect(id): Observable<any>{
+        let headers = new HttpHeaders().set('Content-type', 'application/json');
+
+        return this._http.delete(this.url +'project/' +id, {headers:headers});
+    }
+
+    updateProject(project): Observable<any>{
+        var params = JSON.stringify(project);
+        let headers = new HttpHeaders().set('Content-type', 'application/json');
+
+        return this._http.put(this.url +'project/' + project._id, params, {headers:headers});
     }
 }

@@ -1,5 +1,13 @@
-<div class="container">
+<div class="container" *ngIf="project">
   <h2>{{title}}</h2>
+
+  <div class="message success" *ngIf="status == 'success'">
+    El proyecto se ha creado correctamente, puedes
+    <a [routerLink]="['/proyecto',save_project._id]">verlo aqui</a>
+  </div>
+  <div class="message failed" *ngIf="status =='failed'">
+    El proyecto no se ha podido crear.
+  </div>
 
   <form #projectForm="ngForm" (ngSubmit)="onSubmit(projectForm)">
     <p>
@@ -33,7 +41,10 @@
 
     <p>
       <label for="image">Imagen</label>
-      <input type="file" name="image" #image="ngModel" [(ngModel)]="project.image" />
+      <span class="image" *ngIf="project.image" style="float:none;">
+          <img src="{{url+'get-image/'+project.image}}" *ngIf="project.image" style="width:100px;"/>
+      </span><br/>
+      <input type="file" name="image"  placeholder="Subir imagen" (change)="fileChangeEvent($event)"/>
     </p>
 
     <input type="submit" value="Enviar" [disabled]="!projectForm.form.valid" />
