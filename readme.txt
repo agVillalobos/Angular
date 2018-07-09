@@ -11,3 +11,5 @@
 	-ng serve --open
 -crear un nuevo componente
 	-ng generate component -mycomponent
+-crear una nueva directiva
+	-ng g directive -nombreDirectiva
