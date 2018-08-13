@@ -13,5 +13,5 @@
 	-ng generate component -mycomponent
 -crear una nueva directiva
 	-ng g directive -nombreDirectiva
-Desinstalar angular
+-desinstalar angular
 	-npm uninstall -g @angular/cli
