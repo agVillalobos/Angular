@@ -15,3 +15,5 @@
 	-ng g directive -nombreDirectiva
 -desinstalar angular
 	-npm uninstall -g @angular/cli
+-Actualizar paquetes en el package.
+	-npm update
