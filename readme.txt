@@ -1,6 +1,8 @@
 
 -pagina oficial
 	-https://angular.io/
+-Tutorial
+	-https://angular.io/guide/quickstart	
 -tener instalado node.js
 	-https://nodejs.org/en/
 -instalar angular
