@@ -19,3 +19,8 @@
 	-npm uninstall -g @angular/cli
 -Actualizar paquetes en el package.
 	-npm update
+-instalar bootstrap
+	-npm install bootstrap
+-install jquery
+	-npm install jquery -save
+	
